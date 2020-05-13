@@ -1,0 +1,32 @@
+{% set version = "0.4.1" %}
+
+package:
+  name: xpdconf
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/xpdAcq/xpdConf.git
+  git_rev: {{ version }}
+  git_depth: -1
+
+build:
+  noarch: python
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+
+requirements:
+  host:
+    - python >=3.6
+    - pip
+  run:
+    - python >=3.6
+    - pyyaml
+    - databroker
+
+test:
+  imports:
+    - xpdconf
+    - xpdconf.conf
+
+about:
+  license_file: LICENSE
