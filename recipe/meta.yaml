@@ -26,7 +26,6 @@ requirements:
 test:
   imports:
     - xpdconf
-    - xpdconf.conf
 
 about:
   license_file: LICENSE
