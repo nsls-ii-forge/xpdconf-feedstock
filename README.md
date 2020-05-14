@@ -17,7 +17,7 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=&branchName=master">
+      <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=185&branchName=master">
         <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/xpdconf-feedstock?branchName=master">
       </a>
     </td>

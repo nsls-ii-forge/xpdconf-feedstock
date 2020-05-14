@@ -22,12 +22,10 @@ requirements:
     - python >=3.6
     - pyyaml
     - databroker
-    - ophyd
 
 test:
   imports:
     - xpdconf
-    - xpdconf.conf
 
 about:
   license_file: LICENSE
