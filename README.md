@@ -7,7 +7,7 @@ Package license:
 
 Feedstock license: BSD 3-Clause
 
-Summary: 
+Summary: Configuration manager for XPD beamlines
 
 
 
