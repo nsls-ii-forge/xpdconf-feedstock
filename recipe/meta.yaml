@@ -1,13 +1,13 @@
 {% set version = "0.4.1" %}
+{% set sha256 = "2a1ca83ac3351180eea04df0c5c6e0e3b8fb7d0bf954215edf07f0621f56143a" %}
 
 package:
   name: xpdconf
   version: {{ version }}
 
 source:
-  git_url: https://github.com/xpdAcq/xpdConf.git
-  git_rev: {{ version }}
-  git_depth: -1
+  url: https://github.com/xpdAcq/xpdConf/releases/download/{{ version }}/xpdConf-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   noarch: python
@@ -29,3 +29,4 @@ test:
 
 about:
   license_file: LICENSE
+  summary: Configuration manager for XPD beamlines
