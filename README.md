@@ -5,11 +5,9 @@ Home:
 
 Package license: 
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/nsls-ii-forge/xpdconf-feedstock/blob/master/LICENSE.txt)
 
 Summary: Configuration manager for XPD beamlines
-
-
 
 Current build status
 ====================

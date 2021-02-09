@@ -1,5 +1,5 @@
-{% set version = "0.4.1" %}
-{% set sha256 = "2a1ca83ac3351180eea04df0c5c6e0e3b8fb7d0bf954215edf07f0621f56143a" %}
+{% set version = "0.4.2" %}
+{% set sha256 = "a634d766eda524e3110c78a40de251e0420253394eab456aa843210f124710e8" %}
 
 package:
   name: xpdconf
