@@ -29,6 +29,7 @@ test:
   imports:
     - xpdconf
   commands:
+    - pytest -vvv --pyargs xpdconf.tests
     - python -c 'import os, pkg_resources; assert os.path.isfile(pkg_resources.resource_filename("xpdconf", "examples/sim.yaml"))'
 
 about:
