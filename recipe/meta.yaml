@@ -1,5 +1,5 @@
-{% set version = "0.4.2" %}
-{% set sha256 = "a634d766eda524e3110c78a40de251e0420253394eab456aa843210f124710e8" %}
+{% set version = "0.4.3" %}
+{% set sha256 = "27564e6cff53333593578bf4966c1aed82f0d9a71c204baa9fa907b6a48e13c6" %}
 
 package:
   name: xpdconf
@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
