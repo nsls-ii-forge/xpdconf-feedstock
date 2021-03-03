@@ -1,18 +1,20 @@
-{% set version = "0.4.2" %}
-{% set sha256 = "a634d766eda524e3110c78a40de251e0420253394eab456aa843210f124710e8" %}
+{% set name = "xpdconf" %}
+{% set version = "0.4.5" %}
+{% set sha256 = "63d50b8cce841eb47a45aa92376db48843a3e1db4e014eead7ad22399ce33e9f" %}
 
 package:
-  name: xpdconf
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/xpdAcq/xpdConf/releases/download/{{ version }}/xpdConf-{{ version }}.tar.gz
+  # url: https://github.com/xpdAcq/{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -20,13 +22,23 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - pyyaml
     - databroker
+    - pyyaml
 
 test:
   imports:
     - xpdconf
+  requires:
+    - pytest
+  commands:
+    - pytest -vvv --pyargs xpdconf.tests
+    - python -c 'import os, pkg_resources; assert os.path.isfile(pkg_resources.resource_filename("xpdconf", "examples/sim.yaml"))'
 
 about:
+  home: https://github.com/xpdAcq/xpdConf
+  license: BSD-3-Clause
+  license_family: BSD
   license_file: LICENSE
   summary: Configuration manager for XPD beamlines
+  dev_url: https://github.com/xpdAcq/xpdConf
+  doc_url: http://xpdacq.github.io
